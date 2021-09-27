@@ -10,6 +10,7 @@ services:
       MYSQL_USER: ${CC_MYSQL_USER}
       MYSQL_PASSWORD: ${CC_MYSQL_PASSWORD}
     volumes:
+      - bin:/usr/bin
       - db:/var/lib/mysql
 
   site:
@@ -30,12 +31,16 @@ services:
       BOOTSTRAP_WP_ADMIN_EMAIL: ${BOOTSTRAP_WP_ADMIN_EMAIL}
       BOOTSTRAP_WP_URL: ${BOOTSTRAP_WP_URL}
     volumes:
+      - bin:/usr/bin
       - site:/var/www/html
       - db:/var/lib/mysql
+      - ./db:/home/${BOOTSTRAP_WP_ADMIN_USER}/db
       - ./wp-content:/var/www/html/wp-content
       - ./src/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - ./src/bootstrap.sh:/usr/local/bin/bootstrap
+      - ./src/export.sh:/usr/local/bin/db-export
 
 volumes:
+  bin:
   site:
   db:

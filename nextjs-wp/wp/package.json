@@ -3,9 +3,10 @@
   "scripts": {
     "start": "npm run docker:up",
     "stop": "npm run docker:rm",
-    "destroy": "run-s docker:down purge:db",
-    "purge:db": "shx rm -rf db",
+    "destroy": "run-s docker:down db:purge",
     "bootstrap": "docker-compose run --rm site bootstrap",
+    "db:export": "docker-compose run --rm site db-export",
+    "db:purge": "shx rm -rf db",
     "docker:up": "docker-compose up -d",
     "docker:rm": "docker-compose rm -fs",
     "docker:down": "docker-compose down -v"

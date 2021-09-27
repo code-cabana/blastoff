@@ -2,6 +2,8 @@
 
 WP_CLI='wp --allow-root'
 LOG=$'\n'"[bootstrap] "
+DB_DIR=/home/$BOOTSTRAP_WP_ADMIN_USER/db
+UPLOADS_DIR=/var/www/html/wp-content/uploads
 
 echo $LOG"Install WordPress"
 $WP_CLI core install \
@@ -30,5 +32,5 @@ $WP_CLI plugin list
 echo $LOG"List themes"
 $WP_CLI theme list
 
-echo $LOG"chmod 777 wp-content/uploads"
-chmod -R 777 /var/www/html/wp-content/uploads
+echo $LOG"Loosen $UPLOADS_DIR permissions"
+chmod -R 777 $UPLOADS_DIR
