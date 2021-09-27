@@ -2,11 +2,15 @@
 node_modules
 
 # WordPress
-wp-content/**/*
-/db
+wp-content/*
 
 ## Themes
+wp-content/themes/**/*
 !wp-content/themes/index.php
 
 ## Plugins
+wp-content/plugins/**/*
 !wp-content/plugins/index.php
+
+## Uploads
+!wp-content/uploads
