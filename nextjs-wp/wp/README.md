@@ -17,6 +17,15 @@
 1. Navigate to http://localhost:4000/wp-admin/
 1. Login using credentials defined inside `.env`
 
+### Start over
+
+If something went wrong or you want to start from scratch, follow this process
+
+1. `npm run destroy`
+1. `npm run db:purge`
+1. `npm start`
+1. `npm bootstrap`
+
 ## Commands
 
 ```
