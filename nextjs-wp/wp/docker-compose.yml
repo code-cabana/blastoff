@@ -11,7 +11,6 @@ services:
       MYSQL_PASSWORD: ${CC_MYSQL_PASSWORD}
     volumes:
       - db:/var/lib/mysql
-      - ./db:/var/lib/mysql
 
   site:
     build: .
@@ -34,7 +33,6 @@ services:
       - site:/var/www/html
       - db:/var/lib/mysql
       - ./wp-content:/var/www/html/wp-content
-      - ./db:/var/lib/mysql
       - ./src/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
       - ./src/bootstrap.sh:/usr/local/bin/bootstrap
 
