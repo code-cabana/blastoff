@@ -1,0 +1,12 @@
+{
+  "name": "wp",
+  "scripts": {
+    "start": "npm run docker:up",
+    "stop": "npm run docker:rm",
+    "destroy": "npm run docker:down",
+    "docker:up": "docker-compose up -d",
+    "docker:rm": "docker-compose rm -fs",
+    "docker:down": "docker-compose down -v",
+    "cli:bootstrap": "docker-compose run --rm cli bootstrap"
+  }
+}

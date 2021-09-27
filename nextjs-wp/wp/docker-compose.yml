@@ -1,0 +1,51 @@
+version: "3.9"
+
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${CC_MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${CC_MYSQL_DATABASE}
+      MYSQL_USER: ${CC_MYSQL_USER}
+      MYSQL_PASSWORD: ${CC_MYSQL_PASSWORD}
+    volumes:
+      - db:/var/lib/mysql
+
+  wordpress:
+    image: wordpress
+    working_dir: /var/www/html
+    depends_on:
+      - db
+    ports:
+      - "8000:80"
+    restart: always
+    environment:
+      WORDPRESS_DB_HOST: ${CC_WORDPRESS_DB_HOST}
+      WORDPRESS_DB_USER: ${CC_WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${CC_WORDPRESS_DB_PASSWORD}
+    volumes:
+      - site:/var/www/html
+      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+
+  cli:
+    image: wordpress:cli
+    working_dir: /var/www/html
+    depends_on:
+      - db
+    environment:
+      MYSQL_ROOT_PASSWORD: ${CC_MYSQL_ROOT_PASSWORD}
+      MYSQL_DATABASE: ${CC_MYSQL_DATABASE}
+      MYSQL_USER: ${CC_MYSQL_USER}
+      MYSQL_PASSWORD: ${CC_MYSQL_PASSWORD}
+      WORDPRESS_DB_HOST: ${CC_WORDPRESS_DB_HOST}
+      WORDPRESS_DB_USER: ${CC_WORDPRESS_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${CC_WORDPRESS_DB_PASSWORD}
+    volumes:
+      - site:/var/www/html
+      - db:/var/lib/mysql
+      - ./ci/bootstrap.sh:/usr/local/bin/bootstrap
+
+volumes:
+  site:
+  db:

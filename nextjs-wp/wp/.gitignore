@@ -1,0 +1,13 @@
+.env
+node_modules
+
+# WordPress
+wp-content/themes/*
+wp-content/plugins/*
+/db
+
+## Themes
+!wp-content/themes/index.php
+
+## Plugins
+!wp-content/plugins/index.php
