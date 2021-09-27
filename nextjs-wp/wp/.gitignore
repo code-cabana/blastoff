@@ -2,6 +2,7 @@
 node_modules
 
 # WordPress
+/db
 wp-content/*
 
 ## Themes
