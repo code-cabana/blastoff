@@ -2,8 +2,7 @@
 node_modules
 
 # WordPress
-wp-content/themes/*
-wp-content/plugins/*
+wp-content/**/*
 /db
 
 ## Themes

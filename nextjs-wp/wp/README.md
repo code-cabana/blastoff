@@ -19,3 +19,4 @@ npm run destroy - destroys all related servers and volumes
 - https://github.com/WordPress/gutenberg/tree/HEAD/packages/env#readme
 - https://aschmelyun.com/blog/build-a-solid-wordpress-dev-environment-with-docker/
 - https://www.youtube.com/watch?v=kIqWxjDj4IU&ab_channel=AndrewSchmelyun
+- https://github.com/conetix/docker-wordpress-wp-cli

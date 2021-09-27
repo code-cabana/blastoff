@@ -7,6 +7,6 @@
     "docker:up": "docker-compose up -d",
     "docker:rm": "docker-compose rm -fs",
     "docker:down": "docker-compose down -v",
-    "cli:bootstrap": "docker-compose run --rm cli bootstrap"
+    "cli:bootstrap": "docker-compose run --rm site bootstrap"
   }
 }
