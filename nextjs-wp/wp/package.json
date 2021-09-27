@@ -4,9 +4,9 @@
     "start": "npm run docker:up",
     "stop": "npm run docker:rm",
     "destroy": "npm run docker:down",
+    "bootstrap": "docker-compose run --rm site bootstrap",
     "docker:up": "docker-compose up -d",
     "docker:rm": "docker-compose rm -fs",
-    "docker:down": "docker-compose down -v",
-    "cli:bootstrap": "docker-compose run --rm site bootstrap"
+    "docker:down": "docker-compose down -v"
   }
 }

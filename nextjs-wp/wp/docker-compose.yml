@@ -28,8 +28,8 @@ services:
       - site:/var/www/html
       - db:/var/lib/mysql
       - ./wp-content:/var/www/html/wp-content
-      - ./uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-      - ./ci/bootstrap.sh:/usr/local/bin/bootstrap
+      - ./src/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
+      - ./src/bootstrap.sh:/usr/local/bin/bootstrap
 
 volumes:
   site:
