@@ -34,3 +34,6 @@ $WP_CLI theme list
 
 echo $LOG"Loosen $UPLOADS_DIR permissions"
 chmod -R 777 $UPLOADS_DIR
+
+echo $LOG"Import database file if it exists"
+$WP_CLI db import $DB_DIR/db.sql
