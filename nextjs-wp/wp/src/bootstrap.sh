@@ -29,3 +29,6 @@ $WP_CLI plugin list
 
 echo $LOG"List themes"
 $WP_CLI theme list
+
+echo $LOG"chmod 777 wp-content/uploads"
+chmod -R 777 /var/www/html/wp-content/uploads
