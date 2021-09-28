@@ -39,4 +39,4 @@ To destroy all resources and start from scratch, follow this process:
 1. `npm run destroy`
 1. `npm run db:purge`
 1. `npm start`
-1. `npm bootstrap`
+1. `npm run bootstrap`
