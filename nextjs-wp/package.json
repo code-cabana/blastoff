@@ -1,7 +1,7 @@
 {
   "name": "@codecabana/nextjs-wp",
   "version": "0.0.1",
-  "description": "Starter template for a headless WordPress + NextJS frontend",
+  "description": "Starter template for a headless Wordpress + NextJS frontend",
   "scripts": {
     "dev": "run-s wp:start next:dev",
     "wp:start": "npm run start --prefix wp",

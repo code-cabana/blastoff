@@ -5,7 +5,7 @@ LOG=$'\n'"[bootstrap] "
 DB_DIR=/home/$BOOTSTRAP_WP_ADMIN_USER/db
 UPLOADS_DIR=/var/www/html/wp-content/uploads
 
-echo $LOG"Install WordPress"
+echo $LOG"Install Wordpress"
 $WP_CLI core install \
   --title=$BOOTSTRAP_WP_TITLE \
   --admin_user=$BOOTSTRAP_WP_ADMIN_USER \
