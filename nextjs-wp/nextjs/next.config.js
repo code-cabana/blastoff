@@ -1,5 +1,5 @@
 module.exports = {
   images: {
-    domains: ["localhost", "1.gravatar.com"],
+    domains: ["localhost", "source.unsplash.com", "1.gravatar.com"],
   },
 };
