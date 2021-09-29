@@ -4,6 +4,11 @@ This stack combines NextJS with a headless wordpress instance
 
 Refer to the README.md files in each subdirectory for more details
 
+## Prerequisites
+
+- Docker
+- NodeJS
+
 ## First time setup
 
 Wordpress instance needs to be installed and boostrapped before the frontend can connect to it

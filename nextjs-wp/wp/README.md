@@ -1,10 +1,5 @@
 # NextJS + Wordpress CMS
 
-## Prerequisites
-
-- Docker
-- NodeJS
-
 ## Commands
 
 ```
