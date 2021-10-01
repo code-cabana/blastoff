@@ -1,11 +1,12 @@
 *
-!.gitignore
-!themes
 !plugins
+!themes
 !uploads
 
 ## Themes
+!themes/index.php
+!themes/headless
+!themes/headless/**/*
 
 ## Plugins
-
-## Uploads
+!plugins/index.php
