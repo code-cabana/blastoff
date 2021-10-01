@@ -20,6 +20,6 @@ Wordpress instance needs to be installed and boostrapped before the frontend can
 
 Run `npm run dev` to launch wordpress instance and NextJS frontend simultaneously
 
-## References
+# To Do
 
-- https://wordpress.stackexchange.com/questions/17969/disable-front-end-to-use-as-cms-only
+- Calendar links still point to localhost:4000 instead of 3000. Need to tell wordpress to change all links to 3000 somehow
