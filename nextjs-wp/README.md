@@ -19,3 +19,7 @@ Wordpress instance needs to be installed and boostrapped before the frontend can
 ## Get started
 
 Run `npm run dev` to launch wordpress instance and NextJS frontend simultaneously
+
+## References
+
+- https://wordpress.stackexchange.com/questions/17969/disable-front-end-to-use-as-cms-only
