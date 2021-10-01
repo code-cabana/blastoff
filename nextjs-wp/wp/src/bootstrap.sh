@@ -14,6 +14,9 @@ $WP_CLI core install \
   --url=$BOOTSTRAP_WP_URL \
   --skip-email \
 
+echo $LOG"Active codecabana-headless theme"
+$WP_CLI theme activate codecabana-headless
+
 echo $LOG"Remove all plugins"
 $WP_CLI plugin uninstall --all --deactivate
 

@@ -5,8 +5,8 @@
 
 ## Themes
 !themes/index.php
-!themes/headless
-!themes/headless/**/*
+!themes/codecabana-headless
+!themes/codecabana-headless/**/*
 
 ## Plugins
 !plugins/index.php
