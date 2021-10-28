@@ -1,0 +1,17 @@
+{
+  "name": "wp",
+  "scripts": {
+    "start": "npm run docker:up",
+    "stop": "npm run docker:rm",
+    "destroy": "npm run docker:down",
+    "bootstrap": "docker-compose run --rm site bootstrap",
+    "db:export": "docker-compose run --rm site db-export",
+    "db:purge": "shx rm -rf db",
+    "docker:up": "docker-compose up -d",
+    "docker:rm": "docker-compose rm -fs",
+    "docker:down": "docker-compose down -v"
+  },
+  "devDependencies": {
+    "shx": "^0.3.3"
+  }
+}
