@@ -6,4 +6,6 @@ Project starter templates
 
 ## Usage
 
-`npx degit code-cabana/blastoff/<TEMPLATE NAME> my-project`
+```
+npx degit code-cabana/blastoff/<TEMPLATE NAME> my-project
+```
