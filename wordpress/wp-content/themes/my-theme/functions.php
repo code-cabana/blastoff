@@ -1,8 +1,9 @@
 <?php
-// Allow posts to have an associated image
-function add_featured_image_support()
+
+function add_support_for_theme_features()
 {
-  add_theme_support('post-thumbnails');
+  add_theme_support('post-thumbnails'); // Allow posts to have an associated image
+  add_theme_support('title-tag'); // Add dynamic title tags
 }
 
 // Make wordpress load stylesheets
@@ -21,6 +22,7 @@ function register_scripts()
   wp_enqueue_script('main', get_template_directory_uri() . "/assets/js/main.js", array(), $version, "all", true);
 }
 
-add_action('after_setup_theme', 'add_featured_image_support');
+
+add_action('after_setup_theme', 'add_support_for_theme_features');
 add_action('wp_enqueue_scripts', 'register_styles');
 add_action('wp_enqueue_scripts', 'register_scripts');
