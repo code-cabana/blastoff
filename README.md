@@ -9,3 +9,9 @@ Project starter templates
 ```
 npx degit code-cabana/blastoff/TEMPLATE_NAME my-project
 ```
+
+## Coming soon
+
+- NextJS Commerce + Shopify
+- Webflow
+- NextJS + Sanity + Tina
